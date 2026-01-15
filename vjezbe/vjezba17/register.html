@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+        body { font-family: Arial; background: #f4f4f4; }
+        .container { width: 400px; margin: 40px auto; background: #fff; padding: 20px; }
+        input, select, button { width: 100%; padding: 10px; margin: 8px 0; }
+        button { background: #4CAF50; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+
+    <form action="save_user.php" method="POST">
+        <input type="text" name="first_name" placeholder="First name" required>
+
+        <input type="text" name="last_name" placeholder="Last name" required>
+
+        <input type="email" name="email" placeholder="E-mail" required>
+
+        <input type="text" name="username" placeholder="Username (5-10 chars)"
+               minlength="5" maxlength="10" required>
+
+        <input type="password" name="password" placeholder="Password (min 4 chars)"
+               minlength="4" required>
+
+        <select name="country_id" required>
+			<option value="">Molimo odaberite</option>
+			<option value="1">Argentina</option>
+			<option value="2">Australia</option>
+			<option value="3">Hrvatska</option>
+			<option value="4">Srbija</option>
+			<option value="5">BiH</option>
+		</select>
+
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
